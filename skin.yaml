@@ -1,0 +1,619 @@
+
+# David Amenta
+# dave@daveamenta.com
+# Version 1.0.0
+
+name: Windows 8 Metro
+fontplatform: windows
+
+Common:
+
+  Hover: cl_hover.png 1 1 1 1
+  Menu_Hover: menu_hover.png 2 2 2 2
+  Menu_Checked: menu_checked.png
+  Menu_Background: 0xF0F0F0
+  
+  Group_Background: group_bg.png 1 1 1 1
+  
+  Selected: cl_selected.png 1 1 1 1
+  #Gradient: selected_gradient.png
+  
+  ButtonBar_Background: group_bg.png
+
+# Primary Menu.  Used for Window Menu, and Right-Click
+# Contact Context Menu
+
+Menu:
+  Frame: 0x6593CF
+  FrameSize: 1
+  Padding: 6 7
+  Iconsize: 16
+  Font: Segoe UI 14
+  SeparatorImage: menu_sep.png
+  CheckedIcon: $Menu_Checked
+  Backgrounds:
+    menu: $Menu_Background
+    Selection: $Menu_Hover
+    Gutter: 0xE9EEEE
+  FontColors:
+    Normal: black
+    Selection: black
+    Disabled: grey
+	
+	
+MenuLite:
+  Frame: 0x979797
+  FrameSize: 1
+  Padding: 10 3
+
+  Iconsize: 16
+  Font: Segoe UI 14
+  SeparatorImage: menu_sep.png
+  CheckedIcon: checked.png
+  Backgrounds:
+    menu: white
+    Selection: 0x3399FF
+    Gutter: $Menu_Background
+  FontColors:
+    Normal: black
+    Selection: white
+    Disabled: grey
+	
+	
+  # This is the menu bar for the top of the
+  # contact list window
+
+MenuBar:
+  padding: 2 2
+  background: menubar_bg.png
+  itemskin: MenuButton
+  MenuSkin: Menu
+  IconSize: 16
+  Font: Segoe UI 14
+  
+ # My button class for menu buttons
+MenuButton:
+  IconSize: 8
+  Backgrounds:
+    Normal: menubar_bg.png
+    Down: menu_button_down.png 4 4 4 4
+    Active: menu_button_down.png 4 4 4 4
+    Hover: menu_button_hover.png 4 4 4 4
+    ActiveHover: menu_button_hover.png 4 4 4 4
+    Disabled: 0x666666
+    Notify: 0x0f0f0f
+  FontColors:
+    Normal: black
+    Down:  black
+    Active: black
+    Hover: black
+    ActiveHover: black
+    Disabled: black
+    Notify: black
+  Padding: 6 6
+  margins: 0
+  Font: Segoe UI 14
+  
+  
+  
+  
+  # The main buddies frame on the contact list
+BuddiesPanel:
+  FrameSize: 0 0 0 0
+  Frame: black
+  BuddyMargins: 8 0 3 0
+  GroupMargins: 3 0 0 0
+  GroupPadding: 3 2
+  FontColors:
+    Buddy: black
+    BuddyOffline: grey
+    BuddyHover: black
+    BuddySelected: black
+    Group: 0x1E3287
+    GroupHover: 0x1E3287
+    GroupSelected: 0x1E3287
+    Status: black
+    StatusHover: black
+    StatusSelected: white
+    IdleTime: grey
+    IdleTimeHover: black
+    IdleTimeSelected: black
+    RenameBox: orange
+    AddAccountsLink: blue
+  Fonts:
+    AddAccountsLink: Segoe UI
+  BuddyIcons:
+    Rounded: yes
+    NoIconAlpha: 40%
+  Backgrounds:
+    Group: $Group_Background
+
+    GroupSelected: $Selected
+    BuddySelected: $Selected
+    BuddyHover: $Hover
+    GroupHover: $Hover
+  RenameBox: black
+  
+  GroupIcons:
+    Collapsed: icons/right.png
+    CollapsedHover: icons/right.png
+    CollapsedSelected: icons/right.png
+
+    Expanded: icons/down.png
+    ExpandedHover: icons/down.png
+    ExpandedSelected: icons/down.png
+	
+	
+
+ # button used on the formatting bar 
+ # on the IM window
+Button:
+  IconSize: 20
+  Backgrounds:
+    Normal: button_bg.png 
+    Down: button_down.png 1 1 1 1
+    Active: button_down.png 1 1 1 1
+    Hover: button.png 1 1 1 1
+    ActiveHover: button.png 1 1 1 1
+    Disabled: button_bg.png 1 1 1 1
+    Notify: button.png 1 1 1 1
+  Font: Segoe UI 14
+  FontColors:
+    Normal: black
+    Down: black
+    Active: black
+    Hover:  black
+    ActiveHover: black
+    Disabled:  black
+    Notify:  black
+  Padding: 4 4
+  margins: 2
+  
+# green buttons for action bar
+ActionBarButton:
+  IconSize: 32
+  Backgrounds:
+    Normal: actionbar_button_bg.png
+    Down: actionbar_button_down.png 2 2 2 2
+    Active: actionbar_button.png 4 4 4 4
+    Hover: actionbar_button.png 4 4 4 4
+    ActiveHover: actionbar_button.png 4 4 4 4
+    Disabled: actionbar_button.png 4 4 4 4
+    Notify: actionbar_button.png 4 4 4 4
+  FontColors:
+    Normal: white
+    Down: white
+    Active: white
+    Hover:  white
+    ActiveHover: white
+    Disabled:  white
+    Notify:  white
+  Padding: 4 4
+  MenuIcon: icons/down_white.png
+  margins: 2
+  
+ButtonCL:
+  IconSize: 20
+  Backgrounds:
+    Normal: cl_button.png 10 10 20 10
+    Down: cl_button.png 10 10 20 10
+    Active: cl_button.png 10 10 20 10
+    Hover: cl_button_hover.png 10 10 20 10
+    ActiveHover: cl_button_hover.png 10 10 20 10
+    Notify: cl_button.png
+  FontColors:
+    Normal: black
+    Down: black
+    Active: black
+    Hover:  black
+    ActiveHover: black
+    Disabled:  black
+    Notify:  black
+  Padding: 4 8
+  margins: 2
+
+ComboBox:
+  Backgrounds:
+    Normal: cbo_button.png 3 3 3 3
+    hover: cbo_button_hover.png 3 3 3 3
+  FontColors:
+    Normal:  black
+    Active:  black
+    Hover:  black
+  Font: Segoe UI 14
+  DropdownButtonSkin: ButtonCombo
+  CyclebuttonSkin: Button
+  MenuSkin: Menu
+  Padding: 4 4
+  margins: 0 0 0 0
+  IconSize: 16
+  
+StatusBoxComboBox:
+  Backgrounds:
+    Normal: white
+    hover: white.png
+  FontColors:
+    Normal:  black
+    Active:  black
+    Hover:  black
+  Font: Segoe UI 14
+  DropdownButtonSkin: ButtonCombo
+  CyclebuttonSkin: Button
+  MenuSkin: Menu
+  Padding: 4 4
+  margins: 0 0 0 0
+  IconSize: 16
+
+  
+  
+ButtonCombo:
+  IconSize: 8
+  Backgrounds:
+    Normal: white
+    Hover: cbo_button_hover.png 3 3 3 3
+    Down: cbo_button_hover.png 3 3 3 3
+  Padding: 3 1
+  margins: 0
+  Frame: 0x979797
+  FrameSize: 0
+  Font: Segoe UI 14
+  
+StatusButtonCombo:
+  IconSize: 8
+  Backgrounds:
+    Normal: cbo_button_normal.png 3 3 3 3
+    Hover: cbo_button_hover.png 3 3 3 3
+    Down: cbo_button_hover.png 3 3 3 3
+  Padding: 3 1
+  margins: 0
+  Frame: 0x979797
+  FrameSize: 0
+  Font: Segoe UI 14
+  
+ # IM Window button area (top, edit controls)
+ButtonBar:
+  padding: 6 2
+  margin: 2
+  buttonskin: Button
+  MenuSkin: Menu
+  background: 0xFFFFFF
+  Font: Segoe UI 14
+
+
+ActionButtonBar:
+  padding: 6 2
+  margin: 2
+  buttonskin: Button
+  MenuSkin: Menu
+  background: actionbuttonbar_bg.png
+  Font: Segoe UI 14
+  
+FormattingBar:
+  ToolBarSkin: FormattingButtonBar
+  Font: Segoe UI 14
+  IconSize: 12
+  FontDropDownWidth: 100
+  SizeDropDownWidth:  40
+  
+FormattingButtonBar:
+  padding: 6 2
+  margin: 2
+  buttonskin: Button
+  MenuSkin: Menu
+  background: $ButtonBar_Background
+  
+  
+ButtonBarCombo:
+  padding: 0 0
+  buttonskin: ButtonCombo
+  background: black
+  IconSize: 16
+
+ActionsBar:
+  IconSize: 16
+  ToolbarSkin: ActionButtonBar
+  MenuSkin: Menu
+  ComboBoxSkin: ComboBox
+
+SocialPanel:
+  FrameSize: 0
+  Backgrounds:
+    Normal: social_bg.png
+    Hover: $Hover
+  FontColors:
+    Normal: black
+    Hover: black
+  Font: Segoe UI 14
+  
+EmailPanel:
+  FrameSize: 0
+  Backgrounds:
+    Normal: social_bg.png
+    Hover: $Hover
+  FontColors:
+    Normal: black
+    Hover: black
+  Font: Segoe UI 14
+  
+  
+EmailSubjectBar:
+  ToolBarSkin: FormattingButtonBar
+  FontColors:
+    SubjectLabel:  black
+    SubjectField: black
+  Fonts:
+    SubjectLabel: ~
+    SubjectField: ~
+  FieldBackgroundColor: white
+
+ToFromBar:
+    ToolbarSkin: FormattingButtonBar
+    ComboBoxSkin: ComboBox
+    FontColor:  black
+    Font: Segoe UI 14
+
+InfoBox:
+  Padding: 5 5
+  border: 0
+  Framesize: 1
+  Frame: 0x666666
+  Backgrounds:
+    Header: group_bg.png
+    Email:  white
+    EmailHover: cl_hover.png 3 3 3 3
+    Contact: group_bg.png
+    ContactHover: $Hover
+    ContactSelected: if_selected.png 1 1 1 1
+  Fonts:
+    Header: Segoe UI 14 bold
+    Title: Segoe UI 14 bold
+    Major: Segoe UI 14
+    Minor: Segoe UI 12
+    Link: Segoe UI 14
+  FontColors:
+    Header:  black
+    Title:  black
+    Body: black
+    Link: 0x0066CC
+    NavBarHeader:  0x006E12
+    NavBarLink: 0x0066CC
+    EmailHoverTitle:  black
+    EmailHoverMajor:  black
+    EmailHoverMinor: 0x333333
+    EmailHoverLink: 0x0066CC
+# the panel that contains the 'status changer' on the contact list
+
+StatusPanel:
+  ComboBoxSkin: ComboBox
+  StatusButtonSkin: ButtonCombo
+  FrameSize: 0
+  Frame: 0x666666
+  IconSize: 16
+  
+Progressbar:
+  Mode: Native
+
+SendBar:
+  ToolBarSkin: ActionButtonBar
+  Font: Segoe UI bold
+  FontColor:  black
+
+  
+Tabs:
+  Font: Segoe UI
+  FontColors:
+    Normal: 0x666666
+    Active:  black
+    ActiveHover: 0x333333
+    Notify: red
+    Hover:  black
+
+AccountPanels:
+  Framesize: 0
+  frame: black
+  ButtonSkin: ButtonCL
+  Backgrounds:
+    Account: white
+    Behind: white, white
+  Spacing: 4
+  ServiceIconSize: 16
+  Icons:
+  #    Close: icons/down.png
+  #    CloseHover: icons/down.png
+  #    CloseDown: icons/down.png
+      Show: icons/showicon.png
+
+	  
+	  
+	  
+FileTransfers:
+  Backgrounds:
+    Selected: $Selected
+    Normal: 0xEEEEEE border 0xBBBBBB
+    List: white
+    Padding: 5 5
+  Margins: 0
+
+  CleanUpTaskBar: ActionButtonBar
+
+  Fonts:
+    FileName: bold
+    Other: ~
+    Link: ~
+
+  FontColors:
+    FileName: black
+    Other: black
+    Link: blue
+    FileNameSelected: white
+    OtherSelected: white
+    LinkSelected: white
+	
+	
+
+AppDefaults:
+
+  icons:
+    chevronexpanded: icons/down.png
+    chevroncolapsed: icons/right.png
+
+  PrefComboButton:
+    IconSize: 8
+    Backgrounds:
+      Normal: ../../AppDefaults/v/button_square.png 3 3 3 3
+      Hover: ../../AppDefaults/v/button_square_hover.png 3 3 3 3
+      Down: ../../AppDefaults/v/button_square_down.png 3 3 3 3
+    Font: Segoe UI 8 Bold
+    MenuIcon: ../../AppDefaults/icons/down.png
+    Padding: 5 5
+    margins: 0
+
+  PrefButton:
+    BackGrounds:
+      Normal: ../../AppDefaults/v/button.png 3 3 3 3
+      Hover: ../../AppDefaults/v/button_hover.png 3 3 3 3
+      Down: ../../AppDefaults/v/button_down.png 3 3 3 3
+    Font: Segoe UI 8 Bold
+
+  PrefCombo:
+    Backgrounds:
+      Normal: white border 1 0x999999
+      Active: white border 1 0x666666
+      hover: white border 1 0x3c7fb1
+    FontColors:
+      Normal: Black
+      Active: Black
+      Hover: Black
+    Font: Segoe UI
+    DropdownButtonIcon: ../../AppDefaults/icons/down.png
+    DropdownButtonSkin: AppDefaults.PrefComboButton
+    MenuSkin: Native
+    Padding: 4 4
+    margins: 0 0 0 0
+
+  ez:
+    icons:
+      one:   ../../AppDefaults/ezlayouts/layout_icon_left_badges.png
+      two:   ../../AppDefaults/ezlayouts/layout_icon_right_badges.png
+      three: ../../AppDefaults/ezlayouts/layout_left_icon_right_badge.png
+      four:  ../../AppDefaults/ezlayouts/layout_small_service_status.png
+      five:  ../../AppDefaults/ezlayouts/layout_small_status_service.png
+      six:   ../../AppDefaults/ezlayouts/layout_small_status_only.png
+    margins: 0 0 0 0
+
+
+  Notificationicons:
+    contact:      ../../AppDefaults/notifications/contact.png
+    message:      ../../AppDefaults/notifications/message.png
+    filetransfer: ../../AppDefaults/notifications/filetransfer.png
+    error:        ../../AppDefaults/notifications/error.png
+    email:        ../../AppDefaults/notifications/email.png
+    facebook:     ../../AppDefaults/notifications/facebook.png
+    myspace:      ../../AppDefaults/notifications/myspace.png
+    twitter:      ../../AppDefaults/notifications/twitter.png
+
+  preftabs:
+    backgrounds:
+      selected: 0xffffff
+      normal: 0xefefef
+      hover: vertical 0xdddddd 0xdedede
+      search: 0xcccccc 0xeeeeee horizontal
+
+  PastButton:
+    IconSize: 8
+    Backgrounds:
+      Normal: white
+      Hover: white border 0xcacaca
+      Down: 0xcacaca
+    FontColors:
+      Normal: black
+      Hover: black
+      Down: white
+    Padding: 3 3
+
+
+
+
+  Button:
+    IconSize: 8
+    Backgrounds:
+      Normal: white 0xdddddd
+      Down: 0x666666
+      Active: 0xbbbbbb 0xcacaca
+      Hover: 0xcacaca
+      ActiveHover: 0xcacaca 0x000000
+      Disabled: 0x666666
+      Notify: 0x0f0f0f
+    FontColors:
+      Normal: black
+      Down: 0xaaaaaa
+      Active: white
+      Hover: black
+      ActiveHover: white
+      Disabled: black
+      Notify: black
+    MenuIcon: ../../AppDefaults/icons/down.png
+    Padding: 3 3
+
+  ButtonBar:
+    padding: 2 0
+    buttonskin: AppDefaults.Button
+    background: white 0xdddddd
+
+  FormattingBar:
+    ToolBarSkin: AppDefaults.ButtonBar
+    MenuSkin: Native
+    IconSize: 15
+    FontDropDownWidth: 100
+    SizeDropDownWidth:  33
+
+    Icons:
+      Bold: ../../AppDefaults/icons/formatting/formatbold.png
+      Italic: ../../AppDefaults/icons/formatting/formatitalic.png
+      Underline: ../../AppDefaults/icons/formatting/formatunderline.png
+      ForegroundColor: ../../AppDefaults/icons/formatting/formatforecolor.png
+      BackgroundColor: ../../AppDefaults/icons/formatting/formatbackcolor.png
+      Emote: ../../AppDefaults/icons/formatting/formatemoticon.png
+
+
+  TaskbarIcon: ../../AppDefaults/digsbybig.png
+  dropdownicon: ../../AppDefaults/icons/down.png
+
+  removeicon: ../../AppDefaults/icons/x.png
+
+  
+  
+statusicons:
+  available: statusicons/available.png
+  mobile: statusicons/mobile.png
+  idle: statusicons/idle.png
+  away: statusicons/away.png
+  invisible: statusicons/invisible.png
+  offline: statusicons/offline.png
+  unknown: statusicons/unknown.png
+  typing: statusicons/typing.png
+  typed: statusicons/enteredtext.png
+  
+Popup:
+
+    Background: vista_balloon.png 40 40 40 40
+    Margins: 10 10 10 10
+
+    Padding: 4 4
+    Width: 300
+
+    Fonts:
+      Title: 12 bold
+      Major: 9 bold
+      Minor: 8
+
+    FontColors:
+      Title: 0x003399
+      Major: black
+      Minor: black
+
+    ButtonSkin: Button
+    IconSize: 32
+    IconBadgeSize: 16
+    IconRounded: 2
+

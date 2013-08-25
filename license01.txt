@@ -1,0 +1,9 @@
+This license covers the following software or content:
+
+Digsby Skin - Digsby for Windows Vista
+Digsby Skin - Office 2007 Digsby
+
+-You may not redistribute this software or content without written consent of the author.
+-You may not modify and redistribute this software or content without consent of the author.
+ 
+Contact the author at: dave (a) daveamenta.com
